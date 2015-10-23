@@ -248,9 +248,8 @@ func test8() {
 	println("result:", utf8.RuneCount(arr))
 
 	for i, j := 0, len(arr)-1; i < j; i, j = i+1, j-1 {
-//		println("swap", i, j)
+		//		println("swap", i, j)
 		arr[i], arr[j] = arr[j], arr[i]
 	}
 	println("result:", string(arr))
 }
-
