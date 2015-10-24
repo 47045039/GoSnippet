@@ -1,39 +1,44 @@
 // CmdProject project main.go
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"CmdProject/tbase"
+	"CmdProject/tfunc"
+)
 
 func TestBase() {
-	test1()
+	tbase.TestBase1()
 
-	str1, str2 := test2("E:\\android-5.1.1\\Makefile1")
+	str1, str2 := tbase.TestBase2("E:\\android-5.1.1\\Makefile1")
 	fmt.Printf("test2 result: %s, %s\n", str1, str2)
 
-	test3()
+	tbase.TestBase3()
 
-	test4()
+	tbase.TestBase4()
 
-	println("'0xc' to byte: ", test5('c'))
+	println("'0xc' to byte: ", tbase.TestBase5('c'))
 
-	test6()
+	tbase.TestBase6()
 
-	test7()
+	tbase.TestBase7()
 
-	test8()
+	tbase.TestBase8()
 }
 
 func TestFunc() {
-	TestFunc1(0)
-	TestFunc2()
-	TestFunc3()
+	tfunc.TestFunc1(0)
+	tfunc.TestFunc2()
+	tfunc.TestFunc3()
 
-	fmt.Println("result = ", TestFunc4())
-	fmt.Println("result = ", TestFunc5())
-	fmt.Println("result = ", TestFunc6(2))
+	fmt.Println("result = ", tfunc.TestFunc4())
+	fmt.Println("result = ", tfunc.TestFunc5())
+	fmt.Println("result = ", tfunc.TestFunc6(2))
 
-	TestFunc7()
-	TestFunc8()
-	TestFunc9()
+	tfunc.TestFunc7()
+	tfunc.TestFunc8()
+	tfunc.TestFunc9()
 }
 
 func main() {

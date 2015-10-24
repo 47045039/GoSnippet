@@ -1,4 +1,4 @@
-package main
+package tfunc
 
 import (
 	"fmt"
@@ -205,10 +205,29 @@ func sort(arr []int) {
 }
 
 func TestFunc9() {
+	fmt.Println("@@@@@@@@@@@@ TestFunc 9")
 	var arr []int = []int{3, 5, 4, 7, 1, 2}
 	fmt.Printf("arr type: %s \n", reflect.TypeOf(arr))
 
 	fmt.Printf("before sort: %v \n", arr)
 	sort(arr)
 	fmt.Printf("after sort: %v \n", arr)
+}
+
+func TestFunc() {
+	TestFunc1(0)
+	TestFunc2()
+	TestFunc3()
+
+	fmt.Println("result = ", TestFunc4())
+	fmt.Println("result = ", TestFunc5())
+	fmt.Println("result = ", TestFunc6(2))
+
+	TestFunc7()
+	TestFunc8()
+	TestFunc9()
+}
+
+func main() {
+	TestFunc()
 }

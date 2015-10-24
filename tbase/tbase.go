@@ -1,5 +1,4 @@
-// CmdProject project main.go
-package main
+package tbase
 
 import (
 	"fmt"
@@ -7,10 +6,8 @@ import (
 	"unicode/utf8"
 )
 
-func test1() {
-	println("@@@@@@@@@@@@@@ test 1")
-	println("@@@@@@@@@@@@@@ test 1")
-	println("@@@@@@@@@@@@@@ test 1")
+func TestBase1() {
+	println("@@@@@@@@@@@@@@ TestBase 1")
 	var a int32 = 1
 	a++
 	b := a + 2
@@ -34,10 +31,8 @@ func test1() {
 	fmt.Printf("c=%s, c[0]=%d, d=%d, e=%s \n", c, c[0], d, e)
 }
 
-func test2(path string) (string, string) {
-	println("@@@@@@@@@@@@@@ test 2")
-	println("@@@@@@@@@@@@@@ test 2")
-	println("@@@@@@@@@@@@@@ test 2")
+func TestBase2(path string) (string, string) {
+	println("@@@@@@@@@@@@@@ TestBase 2")
 
 	file, err := os.OpenFile(path, os.O_RDONLY, 0)
 	if err != nil {
@@ -49,10 +44,8 @@ func test2(path string) (string, string) {
 	}
 }
 
-func test3() {
-	println("@@@@@@@@@@@@@@ test 3")
-	println("@@@@@@@@@@@@@@ test 3")
-	println("@@@@@@@@@@@@@@ test 3")
+func TestBase3() {
+	println("@@@@@@@@@@@@@@ TestBase 3")
 	var sum int
 	for i := 0; i < 10; i++ {
 		sum += i
@@ -88,10 +81,8 @@ LOOP1:
 	}
 }
 
-func test4() {
-	println("@@@@@@@@@@@@@@ test 4")
-	println("@@@@@@@@@@@@@@ test 4")
-	println("@@@@@@@@@@@@@@ test 4")
+func TestBase4() {
+	println("@@@@@@@@@@@@@@ TestBase 4")
 
 	var list []string = make([]string, 5, 10)
 	list = []string{"abc", "def", "hij"}
@@ -104,10 +95,8 @@ func test4() {
 	}
 }
 
-func test5(c byte) byte {
-	println("@@@@@@@@@@@@@@ test 5")
-	println("@@@@@@@@@@@@@@ test 5")
-	println("@@@@@@@@@@@@@@ test 5")
+func TestBase5(c byte) byte {
+	println("@@@@@@@@@@@@@@ TestBase 5")
 	i := 2
 	switch i {
 	case 1:
@@ -135,10 +124,8 @@ func test5(c byte) byte {
 	}
 }
 
-func test6() {
-	println("@@@@@@@@@@@@@@ test 6")
-	println("@@@@@@@@@@@@@@ test 6")
-	println("@@@@@@@@@@@@@@ test 6")
+func TestBase6() {
+	println("@@@@@@@@@@@@@@ TestBase 6")
 
 	var arr [6]int // 定义数组
 	arr[0] = 111
@@ -191,10 +178,8 @@ func test6() {
 	}
 }
 
-func test7() {
-	println("@@@@@@@@@@@@@@ test 7")
-	println("@@@@@@@@@@@@@@ test 7")
-	println("@@@@@@@@@@@@@@ test 7")
+func TestBase7() {
+	println("@@@@@@@@@@@@@@ TestBase 7")
 
 	monthdays := make(map[string]int, 5)      // 定义一个len=5的map
 	println("monthdays len:", len(monthdays)) // 注意，map没有cap
@@ -227,7 +212,8 @@ func test7() {
 	println("monthdays[\"May\"] =", value, present)
 }
 
-func test8() {
+func TestBase8() {
+	println("@@@@@@@@@@@@@@ TestBase 8")
 	var str string = "abcdefghijk"
 	var result map[int]int = make(map[int]int, 10)
 
@@ -252,4 +238,27 @@ func test8() {
 		arr[i], arr[j] = arr[j], arr[i]
 	}
 	println("result:", string(arr))
+}
+
+func TestBase() {
+	TestBase1()
+
+	str1, str2 := TestBase2("E:\\android-5.1.1\\Makefile1")
+	fmt.Printf("test2 result: %s, %s\n", str1, str2)
+
+	TestBase3()
+
+	TestBase4()
+
+	println("'0xc' to byte: ", TestBase5('c'))
+
+	TestBase6()
+
+	TestBase7()
+
+	TestBase8()
+}
+
+func main() {
+	TestBase()
 }
