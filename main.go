@@ -4,6 +4,7 @@ package main
 import (
 	"fmt"
 
+	"CmdProject/tadv"
 	"CmdProject/tbase"
 	"CmdProject/tfunc"
 )
@@ -41,11 +42,22 @@ func TestFunc() {
 	tfunc.TestFunc9()
 }
 
+func TestAdv() {
+	tadv.TestAdv1()
+	tadv.TestAdv2()
+	tadv.TestAdv3()
+	tadv.TestAdv4()
+	tadv.TestAdv5()
+	tadv.TestAdv6()
+}
+
 func main() {
 	fmt.Println("Hello World!")
 
 	//	TestBase()
 
-	TestFunc()
+	//	TestFunc()
+
+	TestAdv()
 
 }
