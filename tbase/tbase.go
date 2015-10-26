@@ -1,3 +1,4 @@
+// 基础课程，包导入、函数调用、打印日志、变量定义、array、map、slice、循环、switch等
 package tbase
 
 import (
@@ -257,8 +258,4 @@ func TestBase() {
 	TestBase7()
 
 	TestBase8()
-}
-
-func main() {
-	TestBase()
 }

@@ -1,3 +1,4 @@
+// 函数相关课程，自定义类、全局和局部变量、匿名和延时函数、实现接口、panic和recovery等
 package tfunc
 
 import (
@@ -39,6 +40,7 @@ func (s *stack) Size() (v int) {
 	return s.index
 }
 
+// 实现Stringer接口
 func (s stack) String() string {
 	var str string
 	for i := 0; i < s.index; i++ {
@@ -226,8 +228,4 @@ func TestFunc() {
 	TestFunc7()
 	TestFunc8()
 	TestFunc9()
-}
-
-func main() {
-	TestFunc()
 }
