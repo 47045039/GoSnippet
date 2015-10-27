@@ -7,6 +7,7 @@ import (
 	"CmdProject/tadv"
 	"CmdProject/tbase"
 	"CmdProject/tfunc"
+	"CmdProject/tsample"
 )
 
 func TestBase() {
@@ -51,6 +52,10 @@ func TestAdv() {
 	tadv.TestAdv6()
 }
 
+func TestSample() {
+	tsample.TestCat() // 命令行下执行：./CmdProject.exe -n doc.go main.go
+}
+
 func main() {
 	fmt.Println("Hello World!")
 
@@ -58,6 +63,7 @@ func main() {
 
 	//	TestFunc()
 
-	TestAdv()
+	//	TestAdv()
 
+	TestSample()
 }
