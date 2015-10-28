@@ -7,6 +7,7 @@ import (
 	"CmdProject/tadv"
 	"CmdProject/tbase"
 	"CmdProject/tfunc"
+	"CmdProject/tif"
 	"CmdProject/tsample"
 )
 
@@ -52,6 +53,13 @@ func TestAdv() {
 	tadv.TestAdv6()
 }
 
+func TestIf() {
+	tif.TestIf1()
+	tif.TestIf2()
+	tif.TestIf3()
+	tif.TestIf4()
+}
+
 func TestSample() {
 	tsample.TestCat() // 命令行下执行：./CmdProject.exe -n doc.go main.go
 }
@@ -65,5 +73,7 @@ func main() {
 
 	//	TestAdv()
 
-	TestSample()
+	TestIf()
+
+	//	TestSample()
 }
