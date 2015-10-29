@@ -71,7 +71,8 @@ func TestSample() {
 	//	tsample.TestCat() // 命令行下执行：./CmdProject.exe -n doc.go main.go
 	//	tsample.TestSort()
 	//	tsample.TestReadFile() // 命令行下执行：./CmdProject.exe doc.go main.go
-	tsample.TestMakeDir() // 命令行下执行：./CmdProject.exe -port 512 -p docc
+	// 	tsample.TestMakeDir() // 命令行下执行：./CmdProject.exe -port 512 -p docc
+	tsample.TestCmd()
 }
 
 func main() {
