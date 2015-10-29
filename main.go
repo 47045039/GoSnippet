@@ -61,7 +61,8 @@ func TestIf() {
 }
 
 func TestSample() {
-	tsample.TestCat() // 命令行下执行：./CmdProject.exe -n doc.go main.go
+	//	tsample.TestCat() // 命令行下执行：./CmdProject.exe -n doc.go main.go
+	tsample.TestSort()
 }
 
 func main() {
@@ -73,7 +74,7 @@ func main() {
 
 	//	TestAdv()
 
-	TestIf()
+	//	TestIf()
 
-	//	TestSample()
+	TestSample()
 }

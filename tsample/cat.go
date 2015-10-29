@@ -1,3 +1,4 @@
+// 测试文件读取和关闭、命令行参数
 package tsample
 
 import (
