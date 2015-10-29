@@ -6,9 +6,9 @@ import (
 
 	"CmdProject/tadv"
 	"CmdProject/tbase"
+	"CmdProject/tconc"
 	"CmdProject/tfunc"
 	"CmdProject/tif"
-	"CmdProject/tsample"
 )
 
 func TestBase() {
@@ -60,9 +60,16 @@ func TestIf() {
 	tif.TestIf4()
 }
 
+func TestConc() {
+	//	tconc.TestChan1()
+	//	tconc.TestChan2()
+	//	tconc.TestChan3()
+	tconc.TestChan4()
+}
+
 func TestSample() {
 	//	tsample.TestCat() // 命令行下执行：./CmdProject.exe -n doc.go main.go
-	tsample.TestSort()
+	//	tsample.TestSort()
 }
 
 func main() {
@@ -76,5 +83,7 @@ func main() {
 
 	//	TestIf()
 
-	TestSample()
+	TestConc()
+
+	//	TestSample()
 }
