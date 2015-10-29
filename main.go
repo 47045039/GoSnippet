@@ -8,7 +8,7 @@ import (
 	"CmdProject/tbase"
 	"CmdProject/tfunc"
 	"CmdProject/tif"
-	"CmdProject/tsample"
+	"CmdProject/tnet"
 )
 
 func TestBase() {
@@ -67,12 +67,17 @@ func TestConc() {
 	//	tconc.TestChan4()
 }
 
+func TestNet() {
+	tnet.TestNet()
+	tnet.TestHttp()
+}
+
 func TestSample() {
 	//	tsample.TestCat() // 命令行下执行：./CmdProject.exe -n doc.go main.go
 	//	tsample.TestSort()
 	//	tsample.TestReadFile() // 命令行下执行：./CmdProject.exe doc.go main.go
 	// 	tsample.TestMakeDir() // 命令行下执行：./CmdProject.exe -port 512 -p docc
-	tsample.TestCmd()
+	//	tsample.TestCmd()
 }
 
 func main() {
@@ -88,5 +93,7 @@ func main() {
 
 	//	TestConc()
 
-	TestSample()
+	TestNet()
+
+	//	TestSample()
 }
